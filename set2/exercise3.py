@@ -190,7 +190,13 @@ def loops_5():
     you'll come to see the pros and cons of each over time.
     """
 
-    return None
+    number_field = []
+    for i in range(10):
+        coordinate_row = []
+        for j in range(5):
+            coordinate_row.append("(i{}, j{})".format(i, j))
+        number_field.append(coordinate_row)
+    return number_field
 
 
 def loops_6():
@@ -243,7 +249,16 @@ def loops_7():
     This is a hard problem. Use lots of experimentation and draw
     lots of diagrams!
     """
-    return None
+    starfield = []
+    for i in range(5):
+        number = []
+        for j in range(9):
+            if j < 5 + i and j > 3 - i:
+                number.append("*")
+            else:
+                number.append(" ")
+        starfield.append(number)
+    return starfield
 
 
 def little_printer(some_kind_of_list, exercise_name):
