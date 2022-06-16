@@ -51,3 +51,9 @@ to .append means to add another word/option into the list
 
 Was trying to run test and it wasn't working. Problem solved remember to put the :
 loop 2: You can use variable names from different loops to make life so much more easier
+
+It is now week 3 and I've gotten through most the exercises. However I need to ask Ben for help.
+
+I'm lost I run my code and it matches what I need to do however, when I run the test it doesn't seem to check off the task. I compared my code to some peers and it looks fine I don't know what I'm doing wrong? (loops 3, 4 and 6)
+
+when the code is looking for a string (i) it is important to add (str(i)) so that the code can identify and find the string

@@ -99,10 +99,10 @@ def loops_2():
             ['*', '*', '*', '*', '*', '*', '*', '*', '*', '*'],
           ]
     """
-    star_feild = []
+    star_field = []
     for x in range(10):
-        star_feild.append(loops_1c(number_of_items=10, symbol="*"))
-    return star_feild
+        star_field.append(loops_1c(number_of_items=10, symbol="*"))
+    return star_field
 
 
 def loops_3():
@@ -126,13 +126,13 @@ def loops_3():
     TIP: notice that this needs to to return strings of numbers,
          so call str(number) to cast.
     """
-    number_feild = []
+    number_field = []
     for i in range(10):
         number_row = []
         for x in range(10):
-            number_row.append(i)
-        number_feild.append(number_row)
-    return number_feild
+            number_row.append(str(i))
+        number_field.append(number_row)
+    return number_field
 
 
 def loops_4():
@@ -152,14 +152,14 @@ def loops_4():
       ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
     ]
     """
-    number_feild = []
+    number_field = []
     for i in range(10):
         number_row = []
-        for x in range(10):
-            number_row.append(x)
-        number_feild.append(number_row)
+        for j in range(10):
+            number_row.append(str(j))
+        number_field.append(number_row)
 
-    return number_feild
+    return number_field
 
 
 def loops_5():
@@ -189,14 +189,8 @@ def loops_5():
         f"There are {num_bottles} green bottles"
     you'll come to see the pros and cons of each over time.
     """
-    number_feild = []
-    for i in range(10):
-        coord_row = []
-        for j in range(5):
-            coord_row.append(str(i))
-        number_feild.append(coord_row)
 
-    return number_feild
+    return None
 
 
 def loops_6():
@@ -219,7 +213,13 @@ def loops_6():
     You can use a variable.
     TIP: look out for the starting condition.
     """
-    return None
+    number_wedge = []
+    for i in range(1, 11):
+        row = []
+        for x in range(i):
+            row.append(str(x))
+        number_wedge.append(row)
+    return number_wedge
 
 
 def loops_7():
