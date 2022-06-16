@@ -101,8 +101,7 @@ def loops_2():
     """
     star_feild = []
     for x in range(10):
-        star_feild.append(star_list)
-
+        star_feild.append(loops_1c(number_of_items=10, symbol="*"))
     return star_feild
 
 
@@ -127,7 +126,13 @@ def loops_3():
     TIP: notice that this needs to to return strings of numbers,
          so call str(number) to cast.
     """
-    return None
+    number_feild = []
+    for i in range(10):
+        number_row = []
+        for x in range(10):
+            number_row.append(i)
+        number_feild.append(number_row)
+    return number_feild
 
 
 def loops_4():
@@ -147,7 +152,14 @@ def loops_4():
       ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
     ]
     """
-    return None
+    number_feild = []
+    for i in range(10):
+        number_row = []
+        for x in range(10):
+            number_row.append(x)
+        number_feild.append(number_row)
+
+    return number_feild
 
 
 def loops_5():
@@ -177,7 +189,14 @@ def loops_5():
         f"There are {num_bottles} green bottles"
     you'll come to see the pros and cons of each over time.
     """
-    return None
+    number_feild = []
+    for i in range(10):
+        coord_row = []
+        for j in range(5):
+            coord_row.append(str(i))
+        number_feild.append(coord_row)
+
+    return number_feild
 
 
 def loops_6():

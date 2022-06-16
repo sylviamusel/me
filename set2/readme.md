@@ -50,3 +50,4 @@ START OF EXERCISE 3
 to .append means to add another word/option into the list
 
 Was trying to run test and it wasn't working. Problem solved remember to put the :
+loop 2: You can use variable names from different loops to make life so much more easier
