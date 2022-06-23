@@ -23,6 +23,10 @@ my_list.append(start)
 start.append(step)
 return my_list
 
+Two step ranger
+I used a code: return range(start, stop, 2)
+and it is not returning what I wanted. Hmmm...
+
 SUPER ASKER
 Using the debug console allows you to test code before finalising and putting it in.
 eg. num = 36
@@ -30,4 +34,11 @@ num > high False
 
 to make a string which looks like a number eg ' 31' use int(i) to convert it back into a number
 
-Watching back on Ben's session yesterday it was really helpful to understand how these loops work with asking for a user input and returning messages
+Watching back on Ben's session yesterday it was really helpful to understand how these loops work with asking for a user input and returning messages. Being about to listen to my partner I could get a better grasp on the work and other thinking processes.
+
+23/06/2022 (A WEEK LATER)
+17:34: still trying to figure out the guessing game task. "polite failures"
+
+break means to end the try
+ValueError: not inter
+18:30: Exercise 3 finished!!!!
