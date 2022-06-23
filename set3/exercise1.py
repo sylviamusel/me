@@ -18,8 +18,10 @@ def loop_ranger(start, stop=None, step=1):
     with just the range function, but we'd like you to do it the long way.
     """
     my_list = []
-    for i in range(start, stop, step):
+    i = start
+    while i < stop:
         my_list.append(i)
+        i += step
     return my_list
 
 
@@ -31,7 +33,10 @@ def two_step_ranger(start, stop):
 
     You can either reuse loop_ranger, or the range function that in the standard library
     """
-    return range(start, stop, 2)
+    my_list = []
+    for i in range(start, stop, 2):
+        my_list.append(i)
+    return my_list
 
 
 def stubborn_asker(low, high):
@@ -77,7 +82,7 @@ def super_asker(low, high):
             if low < num < high:
                 return num
         except:
-            print(f"{num} is not between {low} and {high}")
+            print(f"{user_input} is not a number")
 
 
 if __name__ == "__main__":
