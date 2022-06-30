@@ -28,4 +28,21 @@ while loops are for unknown stuff or unknown finishing point
 f"{}"
 f string allows you to place things into strings
 
-16:20: tried pair programming for the first time and it was very helpful. Got though some of last weeks work (exercises 1)
+16:20: tried pair programming for the first time and it was very helpful. Got though some of last weeks work (set 3 exercises 1)
+
+Open and closing files is easy to do but you might forget to close it. And it's important to close the file because I can break everything
+../ means to go up to the previous file
+
+mode r is usually the default
+
+encoding="uts-8" allows you to write with any characters or symbols
+
+\n\t means new line and tab
+
+load
+loads means load string
+
+dump
+dumps means dump string
+
+Just completed exercise 1: nothing much went wrong just played around with the code and ran tests to see if it worked or not

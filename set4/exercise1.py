@@ -3,6 +3,7 @@
 
 import json
 import os
+from statistics import mode
 import requests
 import inspect
 import sys
@@ -37,10 +38,17 @@ def get_some_details():
          dictionary, you'll need integer indeces for lists, and named keys for
          dictionaries.
     """
+
     json_data = open(LOCAL + "/lazyduck.json").read()
 
     data = json.loads(json_data)
-    return {"lastName": None, "password": None, "postcodePlusID": None}
+    d = data["results"][0]
+    pw = d["login"]["password"]
+    ln = d["name"]["last"]
+    pc = d["location"]["postcode"]
+    id = d["id"]["value"]
+    pcid = pc + int(id)
+    return {"lastName": ln, "password": pw, "postcodePlusID": pcid}
 
 
 def wordy_pyramid():
@@ -78,6 +86,10 @@ def wordy_pyramid():
     TIP: to add an argument to a URL, use: ?argName=argVal e.g. &wordlength=
     """
     pyramid = []
+
+    url = "https://us-central1-waldenpondpress.cloudfunctions.net/give_me_a_word?wordlength=20"
+    r = requests.get(url)
+    print("response Content:\n", r.text)
 
     return pyramid
 
