@@ -159,18 +159,16 @@ def diarist():
 
     NOTE: this function doesn't return anything. It has the _side effect_ of modifying the file system
     """
-    file = open("C:\Users\sylvi\1161\me\set4\Trispokedovetiles(laser).gcode", "r")
-    content = file.read()
-    print(content)
-    count = content.count("M10 P1")
-    print(count)
-    name = "laser.pew"
-    file_path = "C:\Users\sylvi\1161\me\set4\laser.pew"
+    file = open(LOCAL + "\Trispokedovetiles(laser).gcode").read()
+    print(file)
+    laser_count = file.count("M10 P1")
+    print(laser_count)
+
+    file_path = open(LOCAL + "\laser.pew").write()
     with open(file_path, "w") as function:
-        function.wite(f"{count}")
+        function.wite(f"{laser_count}")
 
     pass
-
 
 
 if __name__ == "__main__":
