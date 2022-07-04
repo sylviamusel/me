@@ -2,8 +2,11 @@
 
 
 import json
+from multiprocessing.sharedctypes import Value
 import os
+from re import template
 from statistics import mode
+from numpy import maximum
 import requests
 import inspect
 import sys
@@ -87,10 +90,21 @@ def wordy_pyramid():
     """
     pyramid = []
 
-    url = "https://us-central1-waldenpondpress.cloudfunctions.net/give_me_a_word?wordlength=20"
-    r = requests.get(url)
-    print("response Content:\n", r.text)
-
+    # wl means word length
+    wl = 3
+    while wl < 20:
+        url = f"https://us-central1-waldenpondpress.cloudfunctions.net/give_me_a_word?wordlength={wl}"
+        r = requests.get(url)
+        word = r.text
+        pyramid.append(word)
+        wl = wl + 2
+    wl = 20
+    while wl > 3:
+        url = f"https://us-central1-waldenpondpress.cloudfunctions.net/give_me_a_word?wordlength={wl}"
+        r = requests.get(url)
+        word = r.text
+        pyramid.append(word)
+        wl = wl - 2
     return pyramid
 
 
@@ -108,13 +122,24 @@ def pokedex(low=1, high=5):
          get very long. If you are accessing a thing often, assign it to a
          variable and then future access will be easier.
     """
-    id = 5
-    url = f"https://pokeapi.co/api/v2/pokemon/{id}"
-    r = requests.get(url)
-    if r.status_code is 200:
-        the_json = json.loads(r.text)
 
-    return {"name": None, "weight": None, "height": None}
+    pokelist = []
+    for id in range(low, high):
+        url = f"https://pokeapi.co/api/v2/pokemon/{id}"
+        r = requests.get(url)
+        if r.status_code is 200:
+            the_json = r.json()
+            pokelist.append(the_json)
+
+    tallest = {}
+    for pokemon in pokelist:
+        if pokemon["height"] > tallest.get("height", 0):
+            tallest = pokemon
+        pokename = tallest["name"]
+        pokeweight = tallest["weight"]
+        pokeheight = tallest["height"]
+
+    return {"name": pokename, "weight": pokeweight, "height": pokeheight}
 
 
 def diarist():
@@ -134,7 +159,10 @@ def diarist():
 
     NOTE: this function doesn't return anything. It has the _side effect_ of modifying the file system
     """
-    pass
+
+    mode = "r"
+
+    return
 
 
 if __name__ == "__main__":
