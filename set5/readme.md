@@ -11,7 +11,7 @@ Ctrl + Shift + P to search
 # title
 
 _italics_
-csv: text based speadsheet
+csv: text based spreadsheet
 
 .sample(3) pulls 3 random rows from the data
 
@@ -50,3 +50,16 @@ range allows you to slide/zoom in to what you are interested in instead of cutti
 export spreadsheet as a csv and import to software and save. Then open it so the code can read it and done! I really overcomplicated that!
 
 Ask good questions - have interesting answers
+
+Doing exercises I'm quite lost hopefully I can figure it out in class this week. I've been really far behind since being gone for nationals this past week. I guess its too late to get a extension on things ;-;
+
+set 5 exercise 1:
+Wordy_pyramid - I really overcomplicated this too much. I think I need to take it back a set and keep it simple. Will update when I figure it out
+refactoring means to make code simple and more readable
+
+get_a_word_of_length_n - (\*) (star)= multiplication operator
+
+list_of_words_with_lengths - cont. from last activity
+
+exercise 2:
+pretty self explanatory - just took me a while to get the a = bba stuff right otherwise no issues there

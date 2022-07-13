@@ -29,23 +29,7 @@ def wordy_pyramid():
         "https://us-central1-waldenpondpress.cloudfunctions.net/"
         "give_me_a_word?wordlength={length}"
     )
-    pyramid_list = []
-    for i in range(3, 21, 2):
-        url = baseURL.format(api_key="", length=i)
-        r = requests.get(url)
-        if r.status_code is 200:
-            message = r.json()[0]["word"]
-            pyramid_list.append(message)
-        else:
-            print("failed a request", r.status_code, i)
-    for i in range(20, 3, -2):
-        url = baseURL.format(api_key="", length=i)
-        r = requests.get(url)
-        if r.status_code is 200:
-            message = r.json()[0]["word"]
-            pyramid_list.append(message)
-        else:
-            print("failed a request", r.status_code, i)
+    length = [3, 5, 7, 9]
 
     return pyramid_list
 
@@ -63,14 +47,21 @@ def get_a_word_of_length_n(length):
             word = wordlist["word"]
             return word
         else:
-            pass
+            print("something went wrong")
     except Exception:
-        pass
+        print("...")
 
 
 def list_of_words_with_lengths(list_of_lengths):
 
-    pass
+    length = len(list_of_lengths)
+    words_list = {}
+    word_list = []
+    for i in range(length):
+        j = list_of_lengths[i]
+        words_list["word"] = "j" * j
+        word_list.append(words_list["word"])
+        return word_list
 
 
 if __name__ == "__main__":
