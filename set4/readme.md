@@ -57,3 +57,5 @@ First set of code made sense to me early on. it describes how to open the file a
 Second set narrows it down looking at the height of the pokemon
 
 Time to complete exercise 3 "lasers" I'm quite lost with this one. I've already started on it and have been working on it for the past hour.
+
+Lasers isn't working. I needed to open and close it now it works woowhoo

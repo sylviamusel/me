@@ -159,7 +159,7 @@ def diarist():
 
     NOTE: this function doesn't return anything. It has the _side effect_ of modifying the file system
     """
-
+    # with open to not mess up avoid me needing to close the file
     with open(
         LOCAL + "/Trispokedovetiles(laser).gcode", "r", encoding="utf-8"
     ) as gcode:
