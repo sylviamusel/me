@@ -1,4 +1,4 @@
-TODO: Reflect on what you learned this week and what is still unclear.
+WEEK 5 & 7 This log contains info from the week 5 lecture as well as the week 7 lab
 
 14:10: starting lecture online today! will also log my online experience!
 
@@ -52,6 +52,10 @@ export spreadsheet as a csv and import to software and save. Then open it so the
 Ask good questions - have interesting answers
 
 Doing exercises I'm quite lost hopefully I can figure it out in class this week. I've been really far behind since being gone for nationals this past week. I guess its too late to get a extension on things ;-;
+
+I'm following the panda's activity and trying to get the categorical values from my data set. The category "Activity" is working just find but when I want to get "Species" there is an error.
+
+## so turn out that in the spreadsheet it's "Species " WITH A SPACE. I need to be more aware of title and how the spreadsheet was exported.
 
 set 5 exercise 1:
 Wordy_pyramid - I really overcomplicated this too much. I think I need to take it back a set and keep it simple. Will update when I figure it out

@@ -11,28 +11,36 @@ import time
 
 def string_please() -> str:
     """Returns a string, anything you like."""
-    return None
+    my_string = "Hello world"
+    return my_string
 
 
 def list_please() -> list:
     """Returns a list, anything you like."""
-    return None
+    my_list = ["cat", "dog", "horse", "fish"]
+    return my_list
 
 
 def dictionary_please() -> dict:
     """Returns a dictionary, anything you like."""
-    return None
+    my_dict = {"name": "sylvia", "age": 20, "eye colour": "blue"}
+    return my_dict
 
 
 def is_it_5(some_number) -> bool:
     """Returns True if the argument passed is 5, otherwise returns False."""
-    well_is_it = None
-    return well_is_it
+    well_is_it = 5
+    if well_is_it is 5:
+        return True
+    else:
+        return False
 
 
 def take_five(some_number) -> int:
     """Subtracts 5 from some_number."""
-    return None
+
+    the_answer = some_number - 5
+    return the_answer
 
 
 def greet(name="Towering Timmy") -> str:
@@ -40,6 +48,7 @@ def greet(name="Towering Timmy") -> str:
     return a string of "Hello " and the name argument.
     E.g. if given as "Towering Timmy" it should return "Hello Towering Timmy"
     """
+
     return None
 
 

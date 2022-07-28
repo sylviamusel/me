@@ -1,1 +1,1 @@
-TODO: Reflect on what you learned this week and what is still unclear.
+WEEK 6 off no time to work on anything
