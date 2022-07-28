@@ -164,9 +164,9 @@ def pet_filter(letter="a") -> List:
     # fmt: on
     # len means length
     new_pet_list = []
-    for i in range(len(pets)):
-        if letter in pets[i]:
-            new_pet_list.append(pets[i])
+    for pet in pets:
+        if letter in pet:
+            new_pet_list.append(pet)
     return new_pet_list
 
 
@@ -182,7 +182,12 @@ def best_letter_for_pets() -> str:
 
     the_alphabet = string.ascii_lowercase
     most_popular_letter = ""
-
+    current_letter_count = 0
+    for letters in the_alphabet:
+        letter_count = len(pet_filter(letters))
+        if letter_count > current_letter_count:
+            most_popular_letter = letters
+            current_letter_count = letter_count
     return most_popular_letter
 
 
@@ -213,6 +218,11 @@ def make_filler_text_dictionary() -> Dict:
 
     url = "https://us-central1-waldenpondpress.cloudfunctions.net/give_me_a_word?wordlength="
     wd = {}
+    for i in range(3, 8):
+        wd[i] = []
+        for a in range(4):
+            r = requests.get(url + str(i))
+            wd[i].append(r.text)
 
     return wd
 
