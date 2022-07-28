@@ -230,7 +230,7 @@
   "7",
   {
     "of_total": 34,
-    "mark": 27,
+    "mark": 29,
     "results": [
       {
         "value": 1,
@@ -337,12 +337,12 @@
         "name": "\npet_filter:\n    given:    p\n    expected: ['pig', 'sheep', 'guinea pig', 'python', 'scorpion', 'pigeon', 'alpaca', 'guppy']\n    got:      ['pig', 'sheep', 'guinea pig', 'python', 'scorpion', 'pigeon', 'alpaca', 'guppy']"
       },
       {
-        "value": 0,
-        "name": "\nbest_letter_for_pets:\n    given:    * no args *\n    expected: e\n    got:      "
+        "value": 1,
+        "name": "\nbest_letter_for_pets:\n    given:    * no args *\n    expected: e\n    got:      e"
       },
       {
-        "value": 0,
-        "name": "\nmake_filler_text_dictionary:\n    given:    * no args *\n    expected: [[3, 3, 3, 3], [4, 4, 4, 4], [5, 5, 5, 5], [6, 6, 6, 6], [7, 7, 7, 7]]\n    got:      []"
+        "value": 1,
+        "name": "\nmake_filler_text_dictionary:\n    given:    * no args *\n    expected: [[3, 3, 3, 3], [4, 4, 4, 4], [5, 5, 5, 5], [6, 6, 6, 6], [7, 7, 7, 7]]\n    got:      [[3, 3, 3, 3], [4, 4, 4, 4], [5, 5, 5, 5], [6, 6, 6, 6], [7, 7, 7, 7]]"
       },
       {
         "value": 0,
