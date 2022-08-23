@@ -9,9 +9,7 @@ import json
 import os
 import random
 import string
-from tabnanny import check
 import time
-from pytest import Item
 import requests
 from typing import Dict, List
 
